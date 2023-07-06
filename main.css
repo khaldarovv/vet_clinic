@@ -1,0 +1,913 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/FuturaPT-Book.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Book.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 500;
+    src: url("./fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Medium.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 700;
+    src: url("./fonts/FuturaPT-Bold.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Bold.woff") format("woff");
+}
+body {
+    margin: 0;
+    font-family: "Futura PT";
+    font-weight: 400;
+    background-image: url(./images/backgroundimage.png);
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+/* header site */
+.container-header {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-site {
+    padding-bottom: 146px;
+    position: relative;
+    z-index: 5;
+}
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    padding-bottom: 14px;   
+    background-color: #F9F8F8;     
+}
+.address-link {
+    margin-right: 106px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+}
+.address-link::before {
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.tel-number-list {
+    display: flex;
+    margin: 0px;
+    margin-right: 98px;
+    padding: 0px;
+    list-style: none;
+    gap: 13px;
+}
+.tel-number-first::before {
+    content: url(./images/telicon.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::before {
+    content: url(./images/ellipse.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::after {
+    content: url(./images/ellipse.svg);
+    margin-left: 9px;
+}
+.tel-number {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.tel-number:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.tel-number:active {
+    opacity: 0.6;
+}
+.time-list {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.time-item {
+    margin-right: 17px;
+}
+.date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    line-height: normal;
+}
+.date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 7px;
+}
+.time-item:nth-child(2) {
+    margin-right: 0px;
+}
+.time-text {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* header bottom  */
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+.vetclinic-logo {
+    position: absolute;
+    top: calc(50% - 50px);
+    right: calc(50% + 540px);
+}
+.vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.vetclinic-logo:active {
+    opacity: 0.6;
+}
+.nav-link-first::before {
+    content: url(./images/fishicon.svg);
+    margin-right: 12px;
+}
+.navbar {
+    margin-right: 163px;
+    margin-left: auto;    
+}
+.nav-link {
+    margin-right: 55px;
+    color: #333;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.nav-link:hover {
+    border-bottom: 5px solid #fafa33;
+    transition: color, 0.1s ease;
+}
+.nav-link:active {
+    opacity: 0.6;
+}
+.nav-link-end {
+    margin-right: 0px;
+}
+.send-question-button {
+    color: #333;
+    text-align: right;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.send-question-button:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.send-question-button:active {
+    opacity: 0.6;
+}
+.send-question-button::before {
+    content: url(./images/peticon.svg);
+}
+/* hero section */
+.container-hero {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hero-section {
+    position: relative;
+    margin-bottom: 330px;
+}
+.hero-image {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 405px);
+    right: calc(50% + 110px);
+}
+.hero-section-box {
+    margin-left: 520px;
+}
+.hero-section-title {
+    margin: 0px;
+    margin-bottom: 29px;
+    color: #333;
+    font-size: 70px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+.hero-section-title-blue-color {
+    color: #78c0de;
+}
+.hero-section-text-wrapper {
+    width: 495px;
+}
+.hero-section-text {
+    margin: 0px;
+    margin-bottom: 52px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+.hero-section-button {
+    padding: 16px 48px;
+    color: #fff;
+    border-radius: 3px;
+    background: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.hero-section-button:hover {
+    color: #333;
+    background-color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.hero-section-button:active {
+    opacity: 0.6;
+}
+.perrot-img {
+    position: absolute;
+    top: calc(50% + -5px);
+    right: calc(50% + -759px);
+}
+/* article site  */
+.sitata-site {
+    padding-bottom: 191px;
+}
+.container-article {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.blockqoute-wrapper {
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bl-wrap {
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+}
+.bl-wrap::before {
+    content: url(./images/Line.png);
+    margin-left: 350px;
+}
+.bl-wrap::after {
+    content: url(./images/Line.png);
+    margin-left: 350px;
+}
+.blockqoute-wrapper::before {
+    content: url(./images/left-bl.png);
+}
+.blockqoute-wrapper::after {
+    content: url(./images/right-bl.png);
+    margin-left: 880px;
+}
+.vetclinic-blockquote {
+    color: #949494;
+    text-align: center;
+    font-family: Futura PT;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.blockquote-auth {
+    display: block;
+    padding-bottom: 191px;
+    text-align: center;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* section services  */
+.container-services {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.services-title {
+    margin: 0px;
+    margin-bottom: 80px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+}
+.service-list-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.services-list-wrapper {
+    width: 1223px;
+    display: block  ;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.services-list-button:hover {
+    opacity: 0.8;
+}
+.services-list-button:active {
+    opacity: 0.6;
+}
+.service-item {
+    margin-right: 13px;
+    border: 1px solid #f3f3f3;
+}
+.service-item-button:hover {
+    opacity: 0.8;
+}
+.service-item-button:active {
+    opacity: 0.6;
+}
+.service-item:nth-child(1) {
+    border-bottom: none;
+}
+.service-item-button:nth-child(1) {
+    padding: 30px 32px 28px 35px;
+}
+.service-item-end {
+    margin-right: 0px;
+}
+.service-item-button {
+    padding: 30px 32px 42px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    text-decoration: none;
+}
+.service-item-button::before {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+    content: url(./images/doctoricon.svg);
+}
+.service-item-button-second::before {
+    display: flex;
+    justify-content: center;
+    content: url(./images/doctorsicon.svg);
+}
+.service-item-button-three::before {
+    display: flex;
+    justify-content: center;
+    content: url(./images/dogicon.svg);
+}
+.service-item-button-four::before {
+    display: flex;
+    justify-content: center;
+    content: url(./images/dogsicon.svg);
+}
+.service-item-button-five::before {
+    display: flex;
+    justify-content: center;
+    content: url(./images/dogticon.svg);
+}
+.service-item-button-six::before {
+    display: flex;
+    justify-content: center;
+    content: url(./images/lupaicon.svg);
+}
+/* <!-- service end box --> */
+.service-end-box {
+    display: flex;
+    margin-bottom: 127px;
+    padding: 41px 105px 41px 35px;
+    border: 1px solid #f3f3f3;
+    align-items: center;
+}
+
+.service-end-box-img {
+    width: 1223px;
+    border-radius: 5px;
+    margin-right: 58px;
+}
+.service-end-box-title {
+    margin: 0px;
+    margin-bottom: 18px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+.service-end-box-text-wrap {
+    width: 492px;
+}
+.service-end-box-text {
+    margin: 0px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.service-end-box-text-end {
+    margin-bottom: 34px;
+}
+.service-end-box-button-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.service-end-box-button {
+    padding: 14px 36px 15px 35px;
+    border-radius: 3px;
+    background: #FFBD54;
+    color: #FFF;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.service-end-box-button:hover {
+    color: #ffbd54;
+    background-color: #333;
+    transition: color, 0.4s ease;
+}
+.service-end-box-button:active {
+    opacity: 0.6;
+}
+.service-end-box-button-cal {
+    padding: 14px 37px 15px 37px;
+    border-radius: 3px;
+    background: #333;
+}
+.service-end-box-button-cal:hover {
+    color: #333;
+    background-color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.service-end-box-button::before {
+    content: url(./images/moneyicon.svg);
+    margin-right: 7px;
+}
+.service-end-box-button-cal::before {
+    content: url(./images/documenticon.svg);
+    margin-right: 6px;
+}
+/* notification site  */
+.notification-site {
+    background-image: url(./images/articlebg.png);
+    background-repeat: no-repeat;
+    background-size: 1580px; height: 640px;
+    background-position: calc(50% + 0px) calc(70% - 123px);
+}
+.container-notification {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.notification-box {
+    display: flex;
+    flex-direction: column;
+}
+.notification-box-title {
+    margin: 0px;
+    margin-left: 180px;
+    margin-bottom: 50px;
+    padding-top: 190px;
+    color: #fff;
+    font-family: Futura PT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+.form-box {
+    display: flex;
+    margin-left: 180px;
+}
+.input:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: #ffbd54;
+}
+.email-link {
+    width: 335px;
+    margin-right: 21px;
+    padding: 18px 147px 12px 22px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    border-color: #fff;
+    caret-color: #5e54a4;
+    outline: none;
+}
+.form-button {
+    padding: 14px 53px;
+    border-radius: 3px;
+    background: #333;
+    color: #FFF;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    outline: none;
+}
+.form-button:hover {
+    color: #333;
+    border-color: #ffbd54;
+    background-color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.form-button:active {
+    opacity: 0.6;
+}
+/* paper site  */
+.container-paper-site {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.paper-site {
+    padding-bottom: 265px;
+}
+.paper-site-title {
+    margin: 0px;
+    margin-bottom: 80px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+.paper-site-item-title {
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+}
+.paper-site-item-text {
+    margin: 0px;
+    margin-bottom: 28px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.paper-site-item-text-sec {
+    margin-bottom: 30px;
+}
+.tag-list {
+    margin-bottom: 32px;
+}
+.tag-link {
+    margin-right: 7px;
+    color: #3D9CEA;
+    text-align: center;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-decoration: none;
+}
+.tag-link-end {
+    margin-right: 0px;
+}
+.paper-site-item-link {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.paper-site-item-link::before {
+    content: url(./images/peticon.svg);
+}
+.paper-site-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.paper-site-item {
+    margin-right: 24px;
+    border-radius: 5px;
+    border: 1px solid #E4E4E2;
+}
+.paper-site-item-sec {
+    display: flex;
+    align-items: center;
+}
+.paper-site-item-box {
+    padding: 21px 22px 36px 32px;
+}
+.paper-site-item-box-sec {
+    display: flex;
+    flex-direction: column;
+    padding: 41px 34px 37px 30px;
+}
+.paper-site-item-text-wrap-sec {
+    width: 270px;
+}
+.paper-site-item-end {
+    margin-right: 0px;
+}
+.date-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.paper-site-date {
+    display: block;
+    text-align: end;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* callback section */
+.callback-section {
+    padding-bottom: 247px;
+}
+.callback-section-wrap {
+    margin: 0 auto;
+    align-items: center;
+    width: 1519px;
+    height: 650px;
+    display: flex;
+    background-color: #333;
+    background-image: url(./images/callbackbg.png);
+    background-repeat: no-repeat;
+    background-size: 988px;
+    background-position: 550px -10px;
+}
+.iframe-vetclinic {
+    width: 462px;
+    height: 652px;
+    margin-right: 166px;
+}
+.callback-section-box-title {
+    margin: 0px;
+    margin-bottom: 14px;
+    color: #fff;
+    font-family: Futura PT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.callback-section-box-text-wrap {
+    width: 334px;
+}
+.callback-section-box-text {
+    margin: 0px;
+    margin-bottom: 29px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.input-name {
+    margin-bottom: 14px;
+    padding: 16px 290px 13px 22px;
+    border: 2px solid #fff;
+    outline: none;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.input-email {
+    
+    margin-bottom: 14px;
+    padding: 16px 290px 13px 22px;
+    border: 2px solid #fff;
+    outline: none;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.input-question {
+    margin-bottom: 45px;
+    padding: 17px 290px 127px 22px;
+    border: 2px solid #fff;
+    outline: none;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.callback-section-button {
+    padding: 15px 50px;
+    background-color: #ffbd54;
+    color: #FFF;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.callback-section-button:hover {
+    color:#ffbd54;
+    background-color: #333;
+    transition: color, 0.4s ease;
+}
+.callback-section-button:active {
+    opacity: 0.6;
+}
+/* footer site */
+.container-footer {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    align-items: center;
+}
+.footer-vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.footer-vetclinic-logo:active {
+    opacity: 0.6;
+}
+.footer-list-wrap {
+    display: flex;
+}
+.footer-nav-list {
+    margin: 0px;
+    margin-right: 87px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-nav-list-end {
+    margin-right: 0px;
+}
+.footer-nav-item {
+    margin-bottom: 14px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer-nav-item:hover {
+    color: #ffbd54;
+}
+.footer-nav-item:active {
+    opacity: 0.6;
+}
+.footer-nav-item-end {
+    margin-bottom: 0px;
+}
+.footer-time-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    line-height: normal;
+}
+.footer-date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 14px;
+}
+.footer-date-text-sec {
+    margin-left: 32px;
+}
+.footer-address-link {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.footer-address-link:hover {
+    color: #ffbd54;
+}
+.footer-address-link:active {
+    opacity: 0.6;
+}
+.footer-address-link::before {
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.footer-tel-number-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.copyright-site {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 23px;
+    color: #5c5c5c;
+    text-align: right;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
