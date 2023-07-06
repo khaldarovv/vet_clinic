@@ -664,6 +664,12 @@ input:focus {
     line-height: normal;
     text-decoration: none;
 }
+.paper-site-item-link:hover {
+    color:#ffbd54
+}
+.paper-site-item-link:active {
+    opacity: 0.6;
+}
 .paper-site-item-link::before {
     content: url(./images/peticon.svg);
 }
